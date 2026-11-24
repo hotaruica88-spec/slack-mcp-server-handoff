@@ -1,0 +1,23 @@
+{
+	"name": "slack-mcp-server",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"description": "MCP server for Slack user tokens (xoxc + d cookie) with multi-workspace support, deployable to Cloudflare Workers.",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy",
+		"typecheck": "tsc --noEmit",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.32.2",
+		"hono": "^4.13.14",
+		"zod": "^4.6.7"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^5.20261031.1",
+		"typescript": "^5.9.0",
+		"wrangler": "^4.156.0"
+	}
+}
