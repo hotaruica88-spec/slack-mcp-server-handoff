@@ -1,0 +1,9 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "slack-mcp-server",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-10-23",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": { "enabled": true }
+	// Secrets (set with `wrangler secret put`): MCP_AUTH_TOKEN, SLACK_WORKSPACES
+}
