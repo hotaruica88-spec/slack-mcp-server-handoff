@@ -1,0 +1,14 @@
+# Bearer token required by clients calling /mcp
+MCP_AUTH_TOKEN="change-me-to-a-long-random-string"
+
+# Shared "d" cookie (xoxd-...), used by workspaces that have no cookie of their own.
+# Omit if every workspace sets its own cookie (or uses an xoxp token).
+SLACK_COOKIE="xoxd-..."
+
+# One variable per workspace (each Workers variable is limited to 5 KB).
+# Any name starting with SLACK_WORKSPACE_ works.
+SLACK_WORKSPACE_ACME='{"name":"acme","token":"xoxc-...","default":true}'
+SLACK_WORKSPACE_OTHER='{"name":"other","token":"xoxc-...","cookie":"xoxd-..."}'
+
+# Alternative: a single JSON array (must stay under 5 KB in total)
+# SLACK_WORKSPACES='[{"name":"acme","token":"xoxc-...","cookie":"xoxd-...","default":true}]'
